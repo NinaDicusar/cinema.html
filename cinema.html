@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Advanced | CSS Selectors </title>
+    <style>
+        body{
+            background-color: #333;
+            color: white;
+            font-family: Arial ;
+        }
+        .cinema{
+            border: 1px dashed red;
+            padding: 5px;
+            text-align: center;
+        }
+        .cinema span{
+          background-image:url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);  
+          width: 72px;
+          height: 72px;
+          display: inline-block;}
+
+          .cinema .vip span{
+          background-image:url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Orange-Seat-icon.png);  
+          width: 72px;
+          height: 72px;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .cinema .vip span:nth-child(3):before{
+            content: url(https://icons.iconarchive.com/icons/icons-land/medical/48/People-Patient-Male-icon.png);
+        }
+        
+        .cinema .main span{
+          background-image:url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);  
+          width: 72px;
+          height: 72px;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .cinema .main span:first-child::before{
+            content: url(https://icons.iconarchive.com/icons/icons-land/medical/48/People-Patient-Male-icon.png);
+        }
+     
+         .cinema .front span{
+         background-image:url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+          width: 72px;
+          height: 72px;
+          display: inline-block;
+        }
+        .space{
+            display: inline-block;
+            padding: 38px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h1>Advanced CSS Selectors</h1>
+    <div class="cinema">
+<div class="vip">
+   <h2> VIP</h2>
+    <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div>
+
+</div>
+
+<div class="main">
+   <h2>MAIN</h2>
+    <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><div class="space"></div><span>5</span>
+        <span>6<br><img src="https://icons.iconarchive.com/icons/icons-land/vista-people/48/Age-Child-Female-Light-icon.png"></span><span>7</span><span>8</span></div>
+    <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><div class="space"></div><span>5</span><span>6</span><span>7</span><span>8</span></div>
+    <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><div class="space"></div><span>5</span><span>6</span><span>7</span><span>8</span></div>
+
+</div>
+<div class="front">
+    <h2>FRONT</h2>
+    <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+
+</div>
+    </div>
+    
+</body>
+</html>
